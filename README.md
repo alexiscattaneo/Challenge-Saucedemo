@@ -6,6 +6,7 @@ Requisitos para ejecución de pruebas automatizadas:
 - Java 8 (Definir la variable de entorno JAVA_HOME indicando la carpeta del jdk)
 - Maven https://maven.apache.org/download.cgi https://maven.apache.org/install.html
 
+Luego de las instalaciones verificar en la consola que los siguientes comandos dan resultados: 'java -version', 'mvn -v'
 
 Instrucciones:
 Ejecutar los archivos .bat en el siguiente orden
