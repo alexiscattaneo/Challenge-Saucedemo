@@ -1,0 +1,2 @@
+mvn allure:serve
+pause

@@ -1,0 +1,153 @@
+ID Test Case: 1	
+Funcionalidad: Inicio de sesión
+Descripción: Página inicio de sesión
+Precondiciones: -
+Pasos: 
+    1 - Ingresar a 'https://www.saucedemo.com/'
+Resultado Esperado: Se visualizan los campos 'Username', 'Password', y el botón 'Login'
+
+ID Test Case: 2	
+Funcionalidad: Inicio de sesión
+Descripción: Inicio de sesión exitoso
+Precondiciones: Ingresar a 'https://www.saucedemo.com/'
+Pasos: 
+    1 - Ingresar en el campo 'Username' un nombre de usuario válido
+    2 - Ingresar en el campo 'Password' una contraseña válida
+    3 - Hacer clic en el botón 'Login'
+Resultado Esperado: Se visualiza la redirección a la página de productos 'https://www.saucedemo.com/inventory.html'
+
+ID Test Case: 3	
+Funcionalidad: Inicio de sesión
+Descripción: Inicio de sesión credenciales inválidas
+Precondiciones: Ingresar a 'https://www.saucedemo.com/'
+Pasos: 
+    1 - Ingresar en el campo 'Username' un nombre de usuario inválido
+    2 - Ingresar en el campo 'Password' una contraseña inválida
+    3 - Hacer clic en el botón 'Login'
+Resultado Esperado: Se visualiza el mensaje de error 'Epic sadface: Username and password do not match any user in this service'
+
+ID Test Case: 4	
+Funcionalidad: Inicio de sesión
+Descripción: Inicio de sesión 'Username' vacio
+Precondiciones: Ingresar a 'https://www.saucedemo.com/'
+Pasos: 
+    1 - Ingresar en el campo 'Password' una contraseña
+    2 - Hacer clic en el botón 'Login'
+Resultado Esperado: Se visualiza el mensaje de error 'Epic sadface: Username is required'
+
+ID Test Case: 5	
+Funcionalidad: Inicio de sesión
+Descripción: Inicio de sesión 'Password' vacio
+Precondiciones: Ingresar a 'https://www.saucedemo.com/'
+Pasos: 
+    1 - Ingresar en el campo 'Username' un nombre de usuario
+    2 - Hacer clic en el botón 'Login'
+Resultado Esperado: Se visualiza el mensaje de error 'Epic sadface: Password is required'
+
+ID Test Case: 6	
+Funcionalidad: Inicio de sesión
+Descripción: Inicio de sesión 'Password' vacio
+Precondiciones: Ingresar a 'https://www.saucedemo.com/'
+Pasos: 
+    1 - Ingresar en el campo 'Username' un nombre de usuario
+    2 - Hacer clic en el botón 'Login'
+Resultado Esperado: Se visualiza el mensaje de error 'Epic sadface: Password is required'
+
+ID Test Case: 7	
+Funcionalidad: Productos
+Descripción: Página de productos
+Precondiciones: Credenciales de acceso válidas para 'https://www.saucedemo.com/'
+Pasos: 
+    1 - Iniciar sesión con credenciales válidas
+Resultado Esperado: Se visualiza la redirección a la página de productos 'https://www.saucedemo.com/inventory.html' y un listado de productos
+cada uno con su titulo, descripcion, precio y un boton 'Add to cart', un boton a la esquina superior derecha para filtrar productos, el icono del carrito
+y en la esquina superior izquierda el título 'Products' y un botón hamburguesa '≡' y el pie de página con las redes sociales de saucelabs
+
+ID Test Case: 8	
+Funcionalidad: Productos
+Descripción: Página de producto
+Precondiciones: Iniciar sesión con credenciales válidas
+Pasos: 
+    1 - Hacer clic en el título de un producto de la lista
+Resultado Esperado: Se visualiza la página del producto seleccionado, con su imagen, titulo, descripcion y el boton "Add to cart"
+
+ID Test Case: 9	
+Funcionalidad: Deslogueo
+Descripción: Deslogueo exitoso
+Precondiciones: Iniciar sesión con credenciales válidas
+Pasos: 
+    1 - Hacer clic en el botón hamburguesa '≡'
+    2 - Hacer clic en el botón 'Logout'
+Resultado Esperado: Se visualiza la página de login
+
+ID Test Case: 10	
+Funcionalidad: Carrito
+Descripción: Página del carrito
+Precondiciones: Iniciar sesión con credenciales válidas
+Pasos: 
+    1 - Hacer clic en el ícono del carrito
+Resultado Esperado: Se visualiza el titulo 'Your Cart' con las columnas 'QTY', 'Description', y los botones 'Continue Shopping' y 'Checkout'
+
+ID Test Case: 11
+Funcionalidad: Carrito
+Descripción: El usuario agrega un producto al carrito desde el listado
+Precondiciones: Iniciar sesión con credenciales válidas
+Pasos: 
+    1 - Hacer clic en el botón 'Add to cart' de algún producto de la lista
+    2 - Hacer clic en el ícono del carrito
+Resultado Esperado: Se visualiza el producto agregado al carrito con su titulo, descripcion, precio y el botón 'Remove'
+el ícono del carrito muestra un circulo rojo con un numero blanco en el centro del mismo, indicando la cantidad actualizada
+
+ID Test Case: 12	
+Funcionalidad: Carrito
+Descripción: El usuario agrega un producto al carrito desde la pagina del producto
+Precondiciones: Iniciar sesión con credenciales válidas
+Pasos: 
+    1 - Hacer clic en el título de un producto de la lista
+    2 - Hacer clic en el botón 'Add to cart'
+    3 - Hacer clic en el ícono del carrito
+Resultado Esperado: El producto se agrega al carrito, el ícono del carrito muestra la cantidad actualizada.
+
+ID Test Case: 13
+Funcionalidad: Carrito
+Descripción: El usuario agrega varios productos al carrito desde el listado
+Precondiciones: Iniciar sesión con credenciales válidas
+Pasos: 
+    1 - Hacer clic en el botón 'Add to cart' a varios producto de la lista
+    2 - Hacer clic en el ícono del carrito
+Resultado Esperado: Los productos se agregan al carrito y el ícono del carrito muestra la cantidad correcta.
+
+ID Test Case: 14
+Funcionalidad: Carrito
+Descripción: El usuario elimina un producto del carrito
+Precondiciones: El usuario ha agregado productos al carrito
+Pasos: 
+    1 - Hacer clic en el ícono del carrito
+    2 - Hacer clic en el botón "Remove" junto al producto que se desea eliminar
+Resultado Esperado: El producto se elimina del carrito y la cantidad en el ícono del carrito se actualiza
+
+ID Test Case: 15
+Funcionalidad: Carrito
+Descripción: El usuario elimina todos los productos del carrito
+Precondiciones: El usuario ha agregado productos al carrito
+Pasos: 
+    1 - Hacer clic en el ícono del carrito
+    2 - Hacer clic en el botón "Remove" de cada producto
+Resultado Esperado: Los productos se eliminan del carrito, y el ícono circular rojo encima del icono del carrito desaparece
+
+ID Test Case: 16
+Funcionalidad: Carrito
+Descripción: El usuario hace clic al botón 'Continue Shopping'
+Precondiciones: El usuario se encuentra en la página del carrito
+Pasos: 
+    1 - Hacer clic en el botón "Continue Shopping"
+Resultado Esperado: Se visualiza la página del listado de productos
+
+ID Test Case: 17
+Funcionalidad: Carrito
+Descripción: El usuario hace clic al botón 'Checkout'
+Precondiciones: El usuario se encuentra en la página del carrito
+Pasos: 
+    1 - Hacer clic en el botón "Checkout"
+Resultado Esperado: Se visualiza la página del checkout, con el titulo 'Checkout: Your Information', un formulario con los campos
+'First Name', 'Last Name', 'Zip/Postal Code', junto con los botones 'Cancel' y 'Continue'
